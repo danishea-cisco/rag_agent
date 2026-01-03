@@ -1,0 +1,16 @@
+[project]
+name = "daniels-website"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "langchain>=1.2.0",
+    "langchain-community>=0.4.1",
+    "langchain-google-genai>=4.1.2",
+    "langchain-text-splitters>=1.1.0",
+    "langgraph-cli[inmem]>=0.4.11",
+    "markdown>=3.10",
+    "marker-pdf>=1.10.1",
+    "unstructured>=0.18.24",
+]

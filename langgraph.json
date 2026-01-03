@@ -1,0 +1,11 @@
+{
+  "dependencies": [
+    "."
+  ],
+  "graphs": {
+    "daniel_agent": {
+      "path": "daniel_agent.agent:get_agent"
+    }
+  },
+  "env": ".env"
+}
