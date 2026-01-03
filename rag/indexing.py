@@ -1,6 +1,6 @@
 from langchain_community.document_loaders import UnstructuredMarkdownLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_core.vectorstores import InMemoryVectorStore
+from rag.graph_vector_store import Neo4jVectorStore
 from daniel_agent.utils.model import embedding_model
 
 loader = UnstructuredMarkdownLoader(
@@ -21,7 +21,7 @@ all_splits = text_splitter.split_documents(docs)
 
 print(f"Split Daniel's data into {len(all_splits)} sub-documents.")
 
-vector_store = InMemoryVectorStore(embedding=embedding_model)
+vector_store = Neo4jVectorStore(embedding=embedding_model)
 
 document_ids = vector_store.add_documents(documents=all_splits)
 
